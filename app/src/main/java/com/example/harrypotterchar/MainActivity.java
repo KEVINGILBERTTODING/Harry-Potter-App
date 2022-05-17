@@ -11,6 +11,7 @@ import com.example.harrypotterchar.Adapter.CharAdapter;
 import com.example.harrypotterchar.Model.CharModel;
 import com.example.harrypotterchar.Utill.ApiInterface;
 import com.example.harrypotterchar.Utill.DataApi;
+import com.todkars.shimmer.ShimmerRecyclerView;
 
 import java.util.List;
 
@@ -25,20 +26,51 @@ public class MainActivity extends AppCompatActivity {
     private List<CharModel> charModelList;
     private ApiInterface apiInterface;
 
-
-    RecyclerView recyclerView;
+    private ShimmerRecyclerView mShimmerRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+        mShimmerRecyclerView = findViewById(R.id.recycler_char);
+
+        mShimmerRecyclerView.setLayoutManager(new LinearLayoutManager(this),
+                R.layout.char_list);
+
+        mShimmerRecyclerView.setAdapter(charAdapter);
+        // This is optional, use if no attributes are mentioned in layout xml resource.
+        // WARNING: Setting Shimmer programmatically will obsolete all shimmer attributes.
+        /* mShimmerRecyclerView.setShimmer(mShimmer); */
+
+        /* Shimmer layout view type depending on List / Gird */
+        mShimmerRecyclerView.setItemViewType((type, position) -> {
+            switch (type) {
+                case ShimmerRecyclerView.LAYOUT_GRID:
+                    return position % 2 == 0
+                            ? R.layout.char_list
+                            : R.layout.char_list;
+
+                default:
+                case ShimmerRecyclerView.LAYOUT_LIST:
+                    return position == 0 || position % 2 == 0
+                            ? R.layout.char_list
+                            : R.layout.char_list;
+            }
+        });
+
+        mShimmerRecyclerView.showShimmer();     // to start showing shimmer
+
+        // To stimulate long running work using android.os.Handler
+
+
+
         // Inisialisasi recyclerview
-        recyclerView = findViewById(R.id.recycler_char);
 
         layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
+        mShimmerRecyclerView.setLayoutManager(layoutManager);
+        mShimmerRecyclerView.setHasFixedSize(true);
 
         apiInterface = DataApi.getDataApi().create(ApiInterface.class);
 
@@ -57,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
 
                 charModelList = response.body();
                 charAdapter = new CharAdapter(MainActivity.this, charModelList);
-                recyclerView.setAdapter(charAdapter);
+                mShimmerRecyclerView.setAdapter(charAdapter);
             }
 
 

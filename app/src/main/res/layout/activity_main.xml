@@ -7,21 +7,20 @@
     android:background="@color/background"
     tools:context=".MainActivity">
 
-<!--    <com.todkars.shimmer.ShimmerRecyclerView-->
-<!--        android:id="@+id/shimmer_recycler_view"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:orientation="vertical"-->
-<!--        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
-<!--        app:shimmer_recycler_layout="@layout/list_item_shimmer_layout"-->
-<!--        app:shimmer_recycler_item_count="10" />-->
-
-    <androidx.recyclerview.widget.RecyclerView
+    <com.todkars.shimmer.ShimmerRecyclerView
         android:id="@+id/recycler_char"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:shimmer_recycler_layout="@layout/char_list"
+        app:shimmer_recycler_item_count="10" />
 
-    </androidx.recyclerview.widget.RecyclerView>
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/recycler_char"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        >-->
+
 
 </RelativeLayout>
