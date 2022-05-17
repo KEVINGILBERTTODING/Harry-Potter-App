@@ -1,6 +1,7 @@
 package com.example.harrypotterchar.Adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.gesture.GestureLibraries;
 import android.text.style.AlignmentSpan;
 import android.view.LayoutInflater;
@@ -14,6 +15,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.example.harrypotterchar.CharacterDetail;
 import com.example.harrypotterchar.Model.CharModel;
 import com.example.harrypotterchar.R;
 
@@ -90,6 +92,17 @@ public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> 
 
         @Override
         public void onClick(View view) {
+
+            // Send data onclik by position using intent
+
+            Intent intent   =   new Intent(context, CharacterDetail.class);
+            intent.putExtra("name", charModels.get(getAdapterPosition()).getName());
+            intent.putExtra("actor", charModels.get(getAdapterPosition()).getActor());
+            intent.putExtra("date", charModels.get(getAdapterPosition()).getDate());
+            intent.putExtra("image", charModels.get(getAdapterPosition()).getImage());
+            context.startActivity(intent);
+
+
 
         }
     }

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CharacterDetail">
+
+
+    <xyz.sahildave.arclayout.ArcLayout
+        android:id="@+id/imgcover"
+        android:layout_width="match_parent"
+        android:elevation="@dimen/_20sdp"
+        android:layout_height="@dimen/_300sdp">
+
+        <com.flaviofaria.kenburnsview.KenBurnsView
+            android:id="@+id/det_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="@dimen/_20sdp"
+            android:scaleType="centerCrop"
+            android:src="@color/black">
+
+        </com.flaviofaria.kenburnsview.KenBurnsView>
+    </xyz.sahildave.arclayout.ArcLayout>
+
+<!--&lt;!&ndash;    <LinearLayout&ndash;&gt;-->
+<!--&lt;!&ndash;        android:id="@+id/layoutMain"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;        android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;        >&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <com.github.florent37.arclayout.ArcLayout&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/imgcover"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="@dimen/_200sdp"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:arc_cropDirection="cropOutside"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:arc_height="90dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:elevation="@dimen/_20sdp"&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;            >&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <com.flaviofaria.kenburnsview.KenBurnsView&ndash;&gt;-->
+<!--&lt;!&ndash;                android:id="@+id/det_image"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_width="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:layout_height="match_parent"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:scaleType="centerCrop"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:src="@color/black"&ndash;&gt;-->
+<!--&lt;!&ndash;                android:elevation="@dimen/_20sdp"&ndash;&gt;-->
+
+<!--&lt;!&ndash;                />&ndash;&gt;-->
+
+<!--&lt;!&ndash;            ...&ndash;&gt;-->
+
+<!--&lt;!&ndash;        </com.github.florent37.arclayout.ArcLayout>&ndash;&gt;-->
+
+
+<!--    </LinearLayout>-->
+
+
+
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/det_image"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="@dimen/_250sdp"-->
+<!--        android:background="@color/black"-->
+<!--        android:scaleType="fitXY" />-->
+
+    <TextView
+        android:id="@+id/det_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgcover"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/sfbold"
+        android:text="Harry Potter"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/det_actor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/det_name"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/sfbold"
+        android:text="Daniel Radcliffe"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/det_date_of_birth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/det_actor"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/sfbold"
+        android:text="1998-09-10"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp" />
+
+</RelativeLayout>

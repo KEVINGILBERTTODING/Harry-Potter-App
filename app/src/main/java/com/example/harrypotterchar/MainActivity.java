@@ -51,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     public void loadChar(){
         Call<List<CharModel>> call = apiInterface.getCharacter();
         call.enqueue(new Callback<List<CharModel>>() {
+
             @Override
             public void onResponse(Call<List<CharModel>> call, Response<List<CharModel>> response) {
 
