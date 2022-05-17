@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="@dimen/_30sdp"
+        android:layout_width="match_parent"
+        app:cardCornerRadius="@dimen/_10sdp"
+        android:layout_margin="@dimen/_16sdp"
+        app:cardBackgroundColor="@color/card"
+        app:cardElevation="0dp"
+        android:elevation="@dimen/_10sdp"
+        app:cardUseCompatPadding="true"
+        android:layout_height="@dimen/_100sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:id="@+id/img_1"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginLeft="@dimen/_20sdp" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_toRightOf="@id/img_1"
+                android:fontFamily="@font/popsem"
+                android:background="@color/white"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/tv_Actor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_name"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@color/white"
+                android:layout_toRightOf="@id/img_1"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_DateofBirth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_Actor"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@id/img_1"
+                android:background="@color/white"
+                android:textSize="15sp" />
+
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/img_char"
+        android:layout_width="@dimen/_110sdp"
+        android:layout_height="@dimen/_110sdp"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:src="@drawable/ic_image" />
+
+
+
+</RelativeLayout>

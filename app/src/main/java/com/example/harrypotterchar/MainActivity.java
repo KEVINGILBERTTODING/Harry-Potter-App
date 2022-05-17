@@ -49,14 +49,14 @@ public class MainActivity extends AppCompatActivity {
             switch (type) {
                 case ShimmerRecyclerView.LAYOUT_GRID:
                     return position % 2 == 0
-                            ? R.layout.char_list
-                            : R.layout.char_list;
+                            ? R.layout.char_list2
+                            : R.layout.char_list2;
 
                 default:
                 case ShimmerRecyclerView.LAYOUT_LIST:
                     return position == 0 || position % 2 == 0
-                            ? R.layout.char_list
-                            : R.layout.char_list;
+                            ? R.layout.char_list2
+                            : R.layout.char_list2;
             }
         });
 
