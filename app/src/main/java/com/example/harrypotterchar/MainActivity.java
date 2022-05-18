@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.harrypotterchar.Adapter.CharAdapter;
@@ -32,6 +33,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        // Fungsi untuk menyembunyikan navbar
+
+        getWindow().getDecorView().setSystemUiVisibility(
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
+                        View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
 
         mShimmerRecyclerView = findViewById(R.id.recycler_char);
@@ -96,7 +103,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<CharModel>> call, Throwable t) {
 
-                Toast.makeText(MainActivity.this, "Error : "+ t.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "No connection, please try again", Toast.LENGTH_LONG).show();
+
+//                Toast.makeText(MainActivity.this, "Error : "+ t.toString(), Toast.LENGTH_LONG).show();
             }
         });
     }

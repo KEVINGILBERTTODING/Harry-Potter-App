@@ -34,10 +34,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:hint="Harry potter"
+                android:layout_marginTop="@dimen/_10sdp"
                 android:layout_toRightOf="@id/img_1"
                 android:fontFamily="@font/popsem"
+                android:hint="Harry potter"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_13sdp" />
 
@@ -47,9 +47,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tv_name"
                 android:layout_alignParentRight="true"
-                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
                 android:layout_toRightOf="@id/img_1"
-                android:textSize="15sp" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
 
             <TextView
                 android:id="@+id/tv_DateofBirth"
@@ -58,13 +59,12 @@
                 android:layout_below="@+id/tv_Actor"
                 android:layout_alignParentRight="true"
                 android:layout_toRightOf="@id/img_1"
-                android:textSize="15sp" />
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
 
 
 
         </RelativeLayout>
-
-
 
 
 
@@ -75,7 +75,7 @@
         android:layout_width="@dimen/_110sdp"
         android:layout_height="@dimen/_110sdp"
         android:layout_marginLeft="@dimen/_20sdp"
-        android:src="@drawable/ic_image" />
+        android:src="@drawable/img2" />
 
 
 
