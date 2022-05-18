@@ -1,5 +1,7 @@
 package com.example.harrypotterchar;
 
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -8,12 +10,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
 
 public class CharacterDetail extends AppCompatActivity {
 
 
     TextView tvName, tvActor, tvDate;
-    ImageView image;
+    ImageView image, profileImg;
 
     // String for intent
 
@@ -28,6 +33,7 @@ public class CharacterDetail extends AppCompatActivity {
         tvActor     = findViewById(R.id.det_actor);
         tvDate      = findViewById(R.id.det_date_of_birth);
         image       = findViewById(R.id.det_image);
+        profileImg  = findViewById(R.id.profile);
 
 
 
@@ -46,12 +52,19 @@ public class CharacterDetail extends AppCompatActivity {
         tvActor.setText(actrChar);
         tvDate.setText(dateChar);
 
-        // Load image using glide
+        // Load image background using glide
 
         Glide.with(CharacterDetail.this)
                 .load(imgChar)
+                // set image blur
+                .apply(bitmapTransform(new BlurTransformation(20)))
                 .into(image);
 
+        // Load image profile using glide
+
+        Glide.with(CharacterDetail.this)
+                .load(imgChar)
+                .into(profileImg);
 
 
     }

@@ -21,20 +21,20 @@
             >
 
             <TextView
-                android:id="@+id/title1"
+                android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/popsem"
-                android:text="Characters"
+                android:text="Hi, Nafisa Khally"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp" />
+                android:textSize="@dimen/_11sdp" />
             <TextView
                 android:id="@+id/title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/popsem"
                 android:text="Wingardium Leviosa"
-                android:layout_below="@id/title1"
+                android:layout_below="@id/username"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_13sdp" />
 
@@ -42,7 +42,7 @@
                 android:layout_width="@dimen/_15sdp"
                 android:layout_height="@dimen/_15sdp"
                 android:layout_marginLeft="@dimen/_10sdp"
-                android:layout_marginTop="@dimen/_22sdp"
+                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_toRightOf="@id/title2"
                 android:src="@drawable/magic_wind2" />
 
@@ -53,8 +53,9 @@
                 android:layout_below="@+id/title2"
                 android:layout_marginTop="@dimen/_10sdp"
                 android:background="@drawable/bg_searchview"
-                app:iconifiedByDefault="false"
                 android:focusable="false"
+                app:searchIcon="@drawable/ic_search"
+                app:iconifiedByDefault="false"
                 app:queryBackground="@drawable/bg_searchview"
                 app:queryHint="Search..." />
 

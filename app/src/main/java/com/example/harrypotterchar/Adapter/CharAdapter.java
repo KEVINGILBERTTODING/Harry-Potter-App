@@ -1,8 +1,12 @@
 package com.example.harrypotterchar.Adapter;
 
+import static com.bumptech.glide.request.RequestOptions.bitmapTransform;
+
 import android.content.Context;
 import android.content.Intent;
 import android.gesture.GestureLibraries;
+import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.text.style.AlignmentSpan;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,13 +18,17 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.Transformation;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.bumptech.glide.request.RequestOptions;
 import com.example.harrypotterchar.CharacterDetail;
 import com.example.harrypotterchar.Model.CharModel;
 import com.example.harrypotterchar.R;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import jp.wasabeef.glide.transformations.BlurTransformation;
 
 public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> {
 
@@ -60,7 +68,9 @@ public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> 
                 .into(holder.imageChar);
 
 
+
     }
+
 
     @Override
     public int getItemCount() {
@@ -92,7 +102,6 @@ public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> 
             // Inisialisasi imageView
 
             imageChar       =   itemView.findViewById(R.id.img_char);
-
             itemView.setOnClickListener(this);
 
 

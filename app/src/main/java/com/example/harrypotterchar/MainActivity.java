@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.harrypotterchar.Adapter.CharAdapter;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private List<CharModel> charModelList;
     private ApiInterface apiInterface;
     SearchView searchView;
+    private TextView tv_username;
 
     private ShimmerRecyclerView mShimmerRecyclerView;
 
@@ -43,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
+        // Inisialisasi username textview
+        tv_username =   findViewById(R.id.username);
 
         mShimmerRecyclerView = findViewById(R.id.recycler_char);
 
@@ -50,11 +54,7 @@ public class MainActivity extends AppCompatActivity {
                 R.layout.char_list);
 
         mShimmerRecyclerView.setAdapter(charAdapter);
-        // This is optional, use if no attributes are mentioned in layout xml resource.
-        // WARNING: Setting Shimmer programmatically will obsolete all shimmer attributes.
-        /* mShimmerRecyclerView.setShimmer(mShimmer); */
 
-        /* Shimmer layout view type depending on List / Gird */
         mShimmerRecyclerView.setItemViewType((type, position) -> {
             switch (type) {
                 case ShimmerRecyclerView.LAYOUT_GRID:
@@ -72,10 +72,6 @@ public class MainActivity extends AppCompatActivity {
 
         mShimmerRecyclerView.showShimmer();     // to start showing shimmer
 
-        // To stimulate long running work using android.os.Handler
-
-
-
         // Inisialisasi recyclerview
 
         layoutManager = new LinearLayoutManager(this);
@@ -87,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         loadChar();
 
         // Inisialisasi searchview
+
         searchView = findViewById(R.id.search_bar);
         searchView.clearFocus();
 
@@ -127,7 +124,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (filteredList.isEmpty()) {
-            Toast.makeText(this, "Tidak ditemukan", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Not found", Toast.LENGTH_SHORT).show();
         } else {
             charAdapter.filterList(filteredList);
         }
@@ -138,8 +135,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
+    // Method for load json api
 
     public void loadChar(){
         Call<List<CharModel>> call = apiInterface.getCharacter();
