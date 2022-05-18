@@ -19,6 +19,7 @@ import com.example.harrypotterchar.CharacterDetail;
 import com.example.harrypotterchar.Model.CharModel;
 import com.example.harrypotterchar.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> {
@@ -66,6 +67,13 @@ public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> 
         return charModels.size();
     }
 
+    public void filterList(ArrayList<CharModel> filteredList) {
+
+        charModels = filteredList;
+        notifyDataSetChanged();
+    }
+
+
     public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView nameChar, dateChar, actorChar;
@@ -89,6 +97,8 @@ public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> 
 
 
         }
+
+
 
         @Override
         public void onClick(View view) {
