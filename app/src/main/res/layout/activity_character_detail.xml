@@ -127,7 +127,6 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/popsem"
                                 android:text="ancestry"
-                                android:layout_marginTop="@dimen/_10sdp"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/_11sdp"
 
@@ -226,14 +225,14 @@
 
     </LinearLayout>
 
-<!--    <androidx.appcompat.widget.AppCompatImageButton-->
-<!--        android:layout_width="@dimen/_18sdp"-->
-<!--        android:layout_height="@dimen/_18sdp"-->
-<!--        android:layout_marginLeft="@dimen/_16sdp"-->
-<!--        android:layout_marginTop="@dimen/_28sdp"-->
-<!--        android:background="@drawable/ic_back"-->
-<!--        android:onClick="btnBack"-->
-<!--        android:padding="@dimen/_5sdp" />-->
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="@dimen/_15sdp"
+        android:layout_height="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_16sdp"
+        android:layout_marginTop="@dimen/_28sdp"
+        android:background="@drawable/ic_back"
+        android:onClick="btnBack"
+        android:padding="@dimen/_5sdp" />
 
     <TextView
         android:id="@+id/det_species"

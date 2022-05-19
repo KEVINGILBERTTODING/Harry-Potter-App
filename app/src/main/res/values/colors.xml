@@ -7,13 +7,13 @@
     <color name="teal_700">#FF018786</color>
     <color name="white">#FFFFFFFF</color>
     <color name="black">#1C1C1E</color>
-    <color name="background">#181530</color>
-    <color name="card">#1E1D3C</color>
+    <color name="background">#221F34</color>
+    <color name="card">#2B2641</color>
     <color name="transparent">#00000000</color>
     <color name="card2">#4B497B</color>
     <color name="gray">#B2AFAF</color>
     <color name="yellow">#FED402</color>
-
-
+<!--    <color name="yellow">#FED402</color>-->
+    <color name="beige">#EBC08D</color>
 
 </resources>

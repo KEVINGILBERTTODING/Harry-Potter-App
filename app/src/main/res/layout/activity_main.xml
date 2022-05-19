@@ -24,17 +24,18 @@
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/popsem"
-                android:text="Hi, Nafisa Khally"
-                android:textColor="@color/white"
+                android:fontFamily="@font/popreg"
+                android:text="Hi, Diana Thamara"
+                android:textColor="@color/yellow"
                 android:textSize="@dimen/_11sdp" />
+
             <TextView
                 android:id="@+id/title2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@id/username"
                 android:fontFamily="@font/popsem"
                 android:text="Wingardium Leviosa"
-                android:layout_below="@id/username"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_13sdp" />
 

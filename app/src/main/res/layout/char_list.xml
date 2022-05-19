@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_marginTop="@dimen/_20sdp"
+    android:layout_marginTop="@dimen/_10sdp"
     android:layout_height="wrap_content">
 
 

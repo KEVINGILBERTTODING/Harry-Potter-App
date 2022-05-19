@@ -37,6 +37,7 @@ public class CharacterDetail extends AppCompatActivity {
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
 
         setContentView(R.layout.activity_character_detail);
+        // Fungsi untuk menyembunyikan status bar
 
 
 
