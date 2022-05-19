@@ -153,6 +153,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onFailure(Call<List<CharModel>> call, Throwable t) {
 
+                // Menampilkan toast saat no connection
+
                 Toast.makeText(MainActivity.this, "No connection, please try again", Toast.LENGTH_LONG).show();
 
 //                Toast.makeText(MainActivity.this, "Error : "+ t.toString(), Toast.LENGTH_LONG).show();

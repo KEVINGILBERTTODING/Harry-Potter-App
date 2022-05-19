@@ -115,10 +115,17 @@ public class CharAdapter extends RecyclerView.Adapter<CharAdapter.MyViewHolder> 
             // Send data onclik by position using intent
 
             Intent intent   =   new Intent(context, CharacterDetail.class);
-            intent.putExtra("name", charModels.get(getAdapterPosition()).getName());
+            intent.putExtra("name",  charModels.get(getAdapterPosition()).getName());
             intent.putExtra("actor", charModels.get(getAdapterPosition()).getActor());
-            intent.putExtra("date", charModels.get(getAdapterPosition()).getDate());
+            intent.putExtra("date",  charModels.get(getAdapterPosition()).getDate());
             intent.putExtra("image", charModels.get(getAdapterPosition()).getImage());
+            intent.putExtra("species", charModels.get(getAdapterPosition()).getSpecies());
+            intent.putExtra("gender", charModels.get(getAdapterPosition()).getGender());
+            intent.putExtra("house", charModels.get(getAdapterPosition()).getHouse());
+            intent.putExtra("ancestry", charModels.get(getAdapterPosition()).getAncestry());
+            intent.putExtra("eyecolour", charModels.get(getAdapterPosition()).getEyeColour());
+            intent.putExtra("haircolour", charModels.get(getAdapterPosition()).getHairColour());
+            intent.putExtra("patronus", charModels.get(getAdapterPosition()).getPatronus());
             context.startActivity(intent);
 
 

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.HarryPotterChar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <style name="Theme.HarryPotterChar" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/purple_500</item>
         <item name="colorPrimaryVariant">@color/background</item>
@@ -20,13 +20,15 @@
 
     </style>
 
+    <!--    Style untuk searchview  -->
+
     <style name="AppSearchView" parent="Widget.AppCompat.SearchView" >
         <item name="android:fontFamily">@font/popmed</item>
         <item name="hintTextColor">@color/gray</item>
         <item name="android:editTextColor">@color/gray</item>
     </style>
 
-    <!-- Style agar image view di listvolcano memiliki corner radius  -->
+    <!-- Style agar image view memiliki corner radius  -->
 
     <style name="roundedCorners" parent="">
         <item name="cornerFamily">rounded</item>

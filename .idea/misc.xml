@@ -4,14 +4,16 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/bg_button.xml" value="0.35885416666666664" />
+        <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/bg_detail.xml" value="0.3189814814814815" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/bg_searchview.xml" value="0.35885416666666664" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/date_container.xml" value="0.35885416666666664" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/date_container2.xml" value="0.35885416666666664" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/det_container.xml" value="0.35885416666666664" />
+        <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/sex_container.xml" value="0.35885416666666664" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/species_container.xml" value="0.35885416666666664" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/wave.xml" value="0.20104166666666667" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/layout/activity_character_detail.xml" value="0.33" />
-        <entry key="..\:/HarryPotterChar/app/src/main/res/layout/activity_main.xml" value="0.5311203319502075" />
+        <entry key="..\:/HarryPotterChar/app/src/main/res/layout/activity_main.xml" value="0.67" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/layout/char_list.xml" value="0.5462304409672831" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/layout/char_list2.xml" value="0.536" />
       </map>
