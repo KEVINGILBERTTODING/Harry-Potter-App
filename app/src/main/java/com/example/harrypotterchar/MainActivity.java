@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import android.os.Bundle;
 import android.view.View;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ApiInterface apiInterface;
     SearchView searchView;
     private TextView tv_username;
+    private SwipeRefreshLayout  swipeRefreshLayout;
 
     private ShimmerRecyclerView mShimmerRecyclerView;
 
@@ -44,6 +46,20 @@ public class MainActivity extends AppCompatActivity {
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|
                         View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+
+        // Inisialisasi widget Swipe Refresh
+
+        swipeRefreshLayout  =   findViewById(R.id.swipe);
+
+        // Fungsi saat swipe rerfresh
+
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                refreshItem();
+            }
+        });
 
         // Inisialisasi username textview
         tv_username =   findViewById(R.id.username);
@@ -106,6 +122,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+
+
+    // Method untuk swipe refresh
+
+    private void refreshItem() {
+        loadChar();
+
+    }
+
+
     // Method untuk realtime searchview
 
     private void filter(String newText) {
@@ -147,6 +173,7 @@ public class MainActivity extends AppCompatActivity {
                 charModelList = response.body();
                 charAdapter = new CharAdapter(MainActivity.this, charModelList);
                 mShimmerRecyclerView.setAdapter(charAdapter);
+                swipeRefreshLayout.setRefreshing(false);
             }
 
 
@@ -156,6 +183,7 @@ public class MainActivity extends AppCompatActivity {
                 // Menampilkan toast saat no connection
 
                 Toast.makeText(MainActivity.this, "No connection, please try again", Toast.LENGTH_LONG).show();
+                swipeRefreshLayout.setRefreshing(false);
 
 //                Toast.makeText(MainActivity.this, "Error : "+ t.toString(), Toast.LENGTH_LONG).show();
             }
