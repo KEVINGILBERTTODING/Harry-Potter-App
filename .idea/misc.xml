@@ -13,7 +13,8 @@
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/species_container.xml" value="0.35885416666666664" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/drawable/wave.xml" value="0.20104166666666667" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/layout/activity_character_detail.xml" value="0.33" />
-        <entry key="..\:/HarryPotterChar/app/src/main/res/layout/activity_main.xml" value="0.67" />
+        <entry key="..\:/HarryPotterChar/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/HarryPotterChar/app/src/main/res/layout/activity_splash_screen.xml" value="0.22" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/layout/char_list.xml" value="0.5462304409672831" />
         <entry key="..\:/HarryPotterChar/app/src/main/res/layout/char_list2.xml" value="0.536" />
       </map>

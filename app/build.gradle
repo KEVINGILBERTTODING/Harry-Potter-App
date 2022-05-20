@@ -57,14 +57,15 @@ dependencies {
     // If you want to use the GPU Filters
     implementation 'jp.co.cyberagent.android:gpuimage:2.1.0'
 
-    // Dependencies for arc layout
-    implementation 'com.flaviofaria:kenburnsview:1.0.7'
-    implementation 'xyz.sahildave:arclayout:1.0.0'
 
     // Implementation for custom recycler view
 
     implementation 'com.facebook.shimmer:shimmer:0.5.0'
     implementation 'com.todkars:shimmer-recyclerview:0.4.1'
+
+    // Dependencies for loading bar
+
+    implementation 'com.wang.avi:library:2.1.3'
 
 
 }

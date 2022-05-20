@@ -24,8 +24,8 @@
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/popreg"
-                android:text="Hi, Diana Thamara"
+                android:fontFamily="@font/popmed"
+                android:text="Hi, Potters"
                 android:textColor="@color/yellow"
                 android:textSize="@dimen/_11sdp" />
 
